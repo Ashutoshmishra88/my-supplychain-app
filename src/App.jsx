@@ -253,14 +253,11 @@ const ContactModal = ({ isOpen, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycby8w91vz5jACGdkc8P4-xNyCqnSCVeMD5I1RBl8-hqPocEuziU4KJUghf-aQAM4crxjxw/exec",
-        {
-          method: "POST",
-          body: JSON.stringify(formData),
-          headers: { "Content-Type": "application/json" },
-        }
-      );
+      await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
+      });
       setIsSubmitted(true);
       setTimeout(() => {
         onClose();
