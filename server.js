@@ -11,7 +11,7 @@ app.use(express.json());
 app.post("/contact", async (req, res) => {
   try {
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycby8w91vz5jACGdkc8P4-xNyCqnSCVeMD5I1RBl8-hqPocEuziU4KJUghf-aQAM4crxjxw/exec",
+      "https://script.google.com/macros/s/AKfycbzqNXKzMLN_36TKhNdMLiXsRPo5-RSQTe3tjqbuF5ZoObYjbLsqJ7RT_r0Eiphx2Dsa/exec",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
